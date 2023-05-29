@@ -1,0 +1,58 @@
+div {
+    font-size: 16px;
+}
+
+
+.center_plot {
+    margin: auto;
+    text-align: center;
+}
+
+.section {
+    text-align: center;
+}
+
+#top_banner {
+    padding: 1px;
+    text-align: center;
+    background: #414141;
+    color: white;
+    font-size: 15px;
+}
+
+#project_title {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+
+#dsc {
+    margin-top: 3px;
+    margin-bottom: -5px;
+    padding: 0;
+    font-size: 1em;
+}
+
+#prof {
+    margin: 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+
+body {
+    font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+    /* width: 0%; */
+}
+
+
+
+li {
+    padding: 0;
+    margin: -5px;
+}
+
+#wrap {
+    width: 80%;
+    margin: 0 auto;
+}

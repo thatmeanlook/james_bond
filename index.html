@@ -1,0 +1,200 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Luc</title>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon2.jpg">
+    <!-- <link rel="icon" type="image/x-icon" href="icon.png"> -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+
+<body onload=jamesbond()>
+
+    <div id="wrap">
+        <div id="header_wrap" class="outer">
+            <header id="top_banner" class="inner">
+                <h1 id="project_title">Minh Luc</h1>
+                <p id="dsc">Data visualization project</p>
+			<br>
+            </header>
+        </div>
+
+
+        <div>
+            <h2 class="section">“BOND, JAMES BOND.”</h2>
+            James Bond (007) is a British Secret Service agent created in
+            1953 by Ian Fleming. Over the years, there have been more than
+            20 movies with different famous actors portraying the British
+            agent. As a fan of the series, I want to work with this dataset to
+            deliver an analysis of how 007 movies have changed over time.
+            <br>
+            <h3 id="description-of-james-bond-dataset">DESCRIPTION</h3>
+
+            <p>I am going to work on the “James Bond Movie Dataset” from <a
+                    href="https://www.kaggle.com/dreb87/jamesbond">Kaggle</a>.
+                This dataset includes information about 24 James Bond
+                movies from 1962 to 2015. Using the data, I want to explore these ideas:
+                <br>
+
+            <ol>
+                <li>
+                    <p>Correlation between Martinis and how often Bond kills someone?</p>
+                </li>
+                <li>
+                    <p>Which Bond actor has highest average rating?</p>
+                </li>
+                <li>
+                    <p>How have budget and revenues of the movies changed?</p>
+                </li>
+
+                <li>
+                    <p>Where are the locations depicted in the movies?</p>
+                </li>
+                <li>
+                    <p>Difference in movie length for each Bond actor</p>
+                </li>
+
+            </ol>
+        </div>
+        <h3>ANALYSIS</h3>
+
+
+        <div>
+            <h4>1. Martinis vs. Kills</h4>
+            <div id="q1">
+                James Bond (007) is often portrayed as a heavy drinker with the iconic "shaken, not stirred" martinis.
+                He's also an expert marksman. In this analysis, I want to see if there is a correlation between the
+                number of martinis he drinks and the number of people he kills.
+
+            </div>
+            <!-- <h4>Plot:</h4> -->
+            <div id="q1_plot" class="center_plot">
+            </div>
+            <div id="q1_answer" class="center_plot" style="text-align: left;">
+                The plot show the average number of martinis Bond drinks and the average number of people he
+                kills per movie. Based on the plot, there is no direct correlation between the number of martinis
+                Bond drinks and the number of people he kills. A lot of the red dots are clustered at zero and one
+                drink.
+                This could be due to the fact that Bond is not always drinking while on a mission.
+                It's safe to say Bond's killings seem to be independent of his drinking
+                habit, as there is no pattern that connects the two.
+
+            </div>
+        </div>
+
+
+        <div>
+            <h3>2. Highest rated Bond actor</h3>
+            <div id="q2">
+                Using the data from IMDB and Rotton Tomatoes, I want to see which Bond actor has the highest average
+                rating from each of their movies. I want to look at each Website's rating separately and then compare
+                the two ratings.
+
+            </div>
+            <div>
+                <br>
+                <p style="text-align: center; font-size: 18px;"> Average rating for each Bond actor</p>
+                <div id="radio" class="center_plot">
+                    <input type="radio" id="q2_imdb" name="rating" value="imdb" checked="checked">
+                    <label for="Avg_User_IMDB">IMDB</label>
+                    <input type="radio" id="q2_tom" name="rating" value="tomato">
+                    <label for="Avg_User_Rtn_Tom">Rotten Tomatoes</label>
+
+                </div>
+                <div id="q1_plot" class="center_plot">
+                </div>
+            </div>
+            <div id="q2_plot" class="center_plot">
+            </div><br>
+            <div id="q2_answer" class="center_plot" style="text-align: left;">
+                There is a slight difference between the ratings from the two websites. IMBD's ratings have smaller
+                range than Rotten Tomatoes. On the higher end, both websites rate Sean Connery and Daniel Craig highest
+                at around 7.2 average.
+                The lowest rated Bond from IMDB is Pierce Brosnan at 6.47 while Roger Moore is the least favorite from
+                Rotten Tomatoes at 5.68. The difference could be due to the fact that Rotten Tomatoes is more
+                critical than IMDB. Keep in mind, this rating does not reflect each actor's performance in the movie.
+                There are many other factors that go into the rating such as the plot, the director, the cinematography,
+                etc.
+                <br>
+            </div>
+        </div>
+
+        <div>
+            <h3>3. Budget and Revenue:</h3>
+            <div id="q3">
+                As a popular franchise, the James Bond movies have a large budget. I want to see how the budget and
+                revenue of the movies have changed over the years. I want to see if there is a correlation between the
+                budget and the revenue of the movies. The data is adjusted to 2013 dollars.
+
+            </div>
+
+            <div id="q3_plot" class="center_plot">
+            </div>
+            <!-- <h4>Result</h4> -->
+            <div id="q3_answer" class="center_plot" style="text-align: left; ">
+                Budget seems to steadily increase over the years while revenue seems to be more volatile.In the period
+                from 1981 to 1989, the franchise did not have a lot of success. This seems to reflect the ratings from
+                Rotten Tomatoes above as Bond was portrayed by their lowest rated, Roger Moore. Keep in mind the
+                revenues of the
+                movies do not solely depends on the actor. The movies could also
+                have been
+                poorly written or poorly directed. The movie could have also been poorly marketed. More data is needed
+                to answer the question why some movies do better than others financially.
+            </div>
+        </div>
+
+        <div>
+            <h3>4. Locations</h3>
+            <div id="q4">
+                As a secret agent with a mission to save the world, Bond has been to many exotic destinations,
+                from snowy mountains in Switzerland to deserts in Chile.
+                Using the Shooting location provided in the dataset,
+                I calculated the frequency each country appears in the series.
+                I then plotted a choropleth map to visualize where Bond has been.
+            </div>
+            <div id="q4_plot" class="center_plot">
+            </div><br>
+            <div id="q4_answer" class="center_plot" style="text-align: left;">
+                Looking at the distribution on the map, England is on top of the list with 24 appearances in all 24
+                movies. No surprise there since this is where Bond calls home. US, Russia and Italy are among the top
+                locations chosen for Bond movies. Switzerland and Spain also appear in a few movies. It'll be
+                interesting to see where Bond's next mission will take him. </div>
+        </div>
+
+        <div>
+            <h3>5. Movie Length</h3>
+            <div id="q5">
+                The length of a movie depends on several factors, including the genre, the complexity of the plot, and
+                the director's vision for the film. In this analysis, I want to see how the length of the James Bond
+                movies has changed over the years. I want to see if there is a correlation between the length of the
+                movies and the year they were released. I also want to see if there is a difference in the length of the
+                movies for each Bond actor.
+            </div>
+            <div id="q5_plot" class="center_plot">
+            </div><br>
+            <div id="q5_answer" class="center_plot" style="text-align: left;">
+                The plot shows the average length of the movies for each Bond actor. An average length of a typical
+                feature film
+                is around 90 minutes. All 007 movies are much longer than that. In the early days of the franchise
+                (with Sean Connery), the movies were shorter with a median at 115 minutes. The movies have been getting
+                longer over the years. The median length of the last movies with Danial Craig is now around 140 minutes.
+                Keep in mind even though the data is grouped by each Bond actor, the disparity in the length of the
+                movies largely depends on the director's vision and the budget for the film.
+                <br><br>
+                An interesting observation is that, the movies with Sean Connery and Daniel Craigs are rated highest,
+                yet they are on opposite ends of the length spectrum. This suggests that the length of a movie does
+                not correlate to its quality.
+
+            </div>
+        </div>
+        <br>
+        
+  
+
+</body>
+
+</html>
